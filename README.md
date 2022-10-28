@@ -19,9 +19,9 @@ Nuestra oferta al publico se ajustará de acuerdo a la demanda del mismo cliente
 
 **Referencias relevantes**
 
-https://www.etq-amsterdam.com/ - Ecommerce minimalista y paleta de colores
-https://bellroy.com/ - Distribución de header, main y footer
-https://www.thesill.com/ - Paleta de colores integrada al contenido de productos
+https://www.etq-amsterdam.com/ - Ecommerce minimalista y paleta de colores  
+https://bellroy.com/ - Distribución de header, main y footer  
+https://www.thesill.com/ - Paleta de colores integrada al contenido de productos  
 
 
 ## INTEGRANTES
