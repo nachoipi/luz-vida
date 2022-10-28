@@ -17,6 +17,13 @@ Nuestro servicio esta apuntado al consumidor que disfrute de pasar tiempo en su 
 
 Nuestra oferta al publico se ajustará de acuerdo a la demanda del mismo cliente ya que contaremos con una amplia selección de productos decorativos.
 
+**Referencias relevantes**
+
+https://www.etq-amsterdam.com/ - Ecommerce minimalista y paleta de colores
+https://bellroy.com/ - Distribución de header, main y footer
+https://www.thesill.com/ - Paleta de colores integrada al contenido de productos
+
+
 ## INTEGRANTES
 
 **Ignacio Ipiñazar**
