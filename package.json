@@ -1,0 +1,23 @@
+{
+  "name": "luz-vida",
+  "version": "1.0.0",
+  "description": "Trabajo Practico DH\r =======",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nachoipi/luz-vida.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nachoipi/luz-vida/issues"
+  },
+  "homepage": "https://github.com/nachoipi/luz-vida#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
