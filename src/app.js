@@ -1,17 +1,19 @@
 const express = require('express');
 const app = express();
-const port = 3000;
-const {join} = require('path');
-const start = () => console.log('Starting server...');
 
+/*PORT CONFIG*/
+const {port,start} = require('./modules/server')
 app.listen(port,start())
 
+/*STATICS CONFIG*/
+const {join} = require('path');
+const statics = require('./modules/static');
+app.use(statics(join(__dirname,'../public')));
+
 /*ROUTES*/
+let rutasProductos = require('./routes/productos.routes.js')
+let rutasMain = require('./routes/main.js')
 
-const public = join(__dirname, '../public')
-const statics = express.static(public);
-app.use(statics);
-
-app.get('/',(req,res) => {
-    res.sendFile(join(__dirname,'./views/index.html'));
-})
+/*USE*/
+app.use(require('./routes/productos.routes'));
+app.use('/', rutasMain);
