@@ -8,7 +8,7 @@ let model = {
         return JSON.parse(data)
     },
     one: function (sku){
-        let all = this.all();
+        let all = model.all();
         return all.find(e => e.sku == sku)
     }
 }
