@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const {join} = require('path');
 
 /*TEMPLATE CONFIG*/
 app.set('views', join(__dirname,'./views'));
@@ -10,7 +11,6 @@ const {port,start} = require('./modules/server')
 app.listen(port,start())
 
 /*STATICS CONFIG*/
-const {join} = require('path');
 const statics = require('./modules/static');
 app.use(statics(join(__dirname,'../public')));
 
