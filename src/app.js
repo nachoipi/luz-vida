@@ -14,8 +14,6 @@ app.listen(port,start())
 const statics = require('./modules/static');
 app.use(statics(join(__dirname,'../public')));
 
-let rutasMain = require('./routes/main.js')
-
 /*ROUTES*/
 app.use(require('./routes/productos.routes'));
-app.use('/', rutasMain);
+app.use(require('./routes/main.routes'));

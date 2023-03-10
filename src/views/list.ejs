@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <%- include('./partials/head.ejs')  %> 
+        <link rel="stylesheet" href="/css/list.css">
+        <title>Luz & Vida Homedeco</title>
+    </head>
+
+    <body>
+        <% if (products.length > 0) { %>
+                <ul>
+                    <% products.forEach(element => { %>
+                        <%- include('./partials/product.ejs',{element:element})  %> 
+                        <% }) %>
+                    </ul>
+                    <a href="/productos">Volver</a>
+            <% } else { %>
+                <h2>
+                    No hay productos <a href="/productos">Volver</a>
+                </h2>     
+            <% } %>
+    </body>
+
+</html>
