@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <%- include('./partials/head.ejs')  %> 
+        <link rel="stylesheet" href="/css/detail.css">
+        <title>Luz & Vida Homedeco</title>
+    </head>
+
+    <body>
+        <form action="/productos/guardar" method="post">
+                <fieldset>
+                    <legend>Product name</legend>
+                    <input type="text" name="name" id="name">
+                </fieldset>
+                <fieldset>
+                    <legend>Product price</legend>
+                    <input type="text" name="price" id="price">
+                </fieldset>
+                <fieldset>
+                    <legend>Product category</legend>
+                    <input type="radio" name="category" id="Cat1">
+                    <label for="category-Cat1">Cat 1</label>
+                    <input type="radio" name="category" id="Cat2">
+                    <label for="category-Cat2">Cat 2</label>
+                    <input type="radio" name="category" id="Cat3">
+                    <label for="category-Cat3">Cat 3</label>
+                </fieldset>
+            <button type="submit">Guardar</button>
+        </form>
+
+    </body>
+
+</html> 

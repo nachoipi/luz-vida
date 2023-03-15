@@ -1,3 +1,4 @@
+const { urlencoded } = require('express');
 const express = require('express');
 const app = express();
 const {join} = require('path');
@@ -13,6 +14,8 @@ app.listen(port,start())
 /*STATICS CONFIG*/
 const statics = require('./modules/static');
 app.use(statics(join(__dirname,'../public')));
+
+app.use(express.urlencoded({extended:true}));
 
 /*ROUTES*/
 app.use(require('./routes/productos.routes'));

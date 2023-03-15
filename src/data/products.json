@@ -1,20 +1,32 @@
 [
-    {
-        "name":"One",
-        "price":500,
-        "category":"Cat1",
-        "sku":1
-    },
-    {
-        "name":"Two",
-        "price":100,
-        "category":"Cat1",
-        "sku":2
-    },
-    {
-        "name":"Three",
-        "price":1500,
-        "category":"Cat2",
-        "sku":3
-    }
+  {
+    "name": "One",
+    "price": 500,
+    "category": "Cat1",
+    "sku": 1
+  },
+  {
+    "name": "Two",
+    "price": 100,
+    "category": "Cat1",
+    "sku": 2
+  },
+  {
+    "name": "Three",
+    "price": 1500,
+    "category": "Cat2",
+    "sku": 3
+  },
+  {
+    "name": "Prueba1",
+    "price": 1,
+    "category": "on",
+    "sku": 4
+  },
+  {
+    "name": "Prueba2",
+    "price": 2,
+    "category": "on",
+    "sku": 5
+  }
 ]

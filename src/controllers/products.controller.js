@@ -1,4 +1,4 @@
-const {all,one} = require('../models/products.model')
+const {all,one,generate,write} = require('../models/products.model')
 
 const controller = {
     
@@ -21,6 +21,16 @@ const controller = {
         }
 
         return res.render('detail',{product:null})
+    },
+    create: (req,res) => {
+        return res.render('create');
+    },
+    save: (req,res) => {
+        let newProduct = generate(req.body)
+        let allProducts = all()
+        allProducts.push(newProduct)
+        write(allProducts)
+        return res.redirect('/productos/')
     }
 };
 
