@@ -1,6 +1,7 @@
 const { urlencoded } = require('express');
 const express = require('express');
 const app = express();
+const methodOverride = require('method-override');
 const {join} = require('path');
 
 /*TEMPLATE CONFIG*/
@@ -16,6 +17,8 @@ const statics = require('./modules/static');
 app.use(statics(join(__dirname,'../public')));
 
 app.use(express.urlencoded({extended:true}));
+
+app.use(methodOverride('m'));
 
 /*ROUTES*/
 app.use(require('./routes/productos.routes'));

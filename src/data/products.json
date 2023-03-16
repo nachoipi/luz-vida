@@ -19,14 +19,20 @@
   },
   {
     "name": "Prueba1",
-    "price": 1,
-    "category": "on",
+    "price": 1000,
+    "category": "Cat2",
     "sku": 4
   },
   {
-    "name": "Prueba2",
-    "price": 2,
-    "category": "on",
+    "name": "Producto nro 5",
+    "price": 2500,
+    "category": "Cat3",
     "sku": 5
+  },
+  {
+    "name": "Prueba1",
+    "price": 1,
+    "category": "Cat1",
+    "sku": 6
   }
 ]

@@ -13,9 +13,9 @@
             <article>
                 <h2><%= product.name %> <span>$<%= product.price %></span></h2>
                 <nav>
-                    <a href="/productos/<%= product.category %>">
-                        <%= product.category %>
-                    </a>
+                    <a href="/productos/<%= product.category %>"><%= product.category %></a>
+                    <br>
+                    <a href="/productos/editar/<%= product.sku %>">Editar producto</a>
                 </nav>
             </article>
         <% } else { %>

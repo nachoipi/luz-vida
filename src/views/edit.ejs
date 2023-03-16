@@ -11,22 +11,23 @@
         <nav>
             <a href="/productos/">Volver</a>
         </nav>
-        <form action="/productos/guardar" method="post">
+        <form action="/productos/actualizar?m=PUT" method="post">
+                <input type="hidden" name="sku" value="<%= product.sku %>">
                 <fieldset>
                     <legend>Product name</legend>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" value="<%= product.name %>">
                 </fieldset>
                 <fieldset>
                     <legend>Product price</legend>
-                    <input type="text" name="price" id="price">
+                    <input type="text" name="price" id="price" value="<%= product.price %>">
                 </fieldset>
                 <fieldset>
                     <legend>Product category</legend>
-                    <input type="radio" name="category" id="category-Cat1">
+                    <input type="radio" name="category" id="category-Cat1" value="Cat1"<%= product.category == 'Cat1' ? 'checked' : '' %> >
                     <label for="category-Cat1">Cat 1</label>
-                    <input type="radio" name="category" id="category-Cat2">
+                    <input type="radio" name="category" id="category-Cat2" value="Cat2"<%= product.category == 'Cat2' ? 'checked' : '' %> >
                     <label for="category-Cat2">Cat 2</label>
-                    <input type="radio" name="category" id="category-Cat3">
+                    <input type="radio" name="category" id="category-Cat3" value="Cat3"<%= product.category == 'Cat3' ? 'checked' : '' %> >
                     <label for="category-Cat3">Cat 3</label>
                 </fieldset>
             <button type="submit">Guardar</button>
