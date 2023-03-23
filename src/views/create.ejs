@@ -11,7 +11,7 @@
         <nav>
             <a href="/productos/">Volver</a>
         </nav>
-        <form action="/productos/guardar" method="post">
+        <form action="/productos/guardar" method="post" enctype="multipart/form-data">
                 <fieldset>
                     <legend>Product name</legend>
                     <input type="text" name="name" id="name">
@@ -22,12 +22,17 @@
                 </fieldset>
                 <fieldset>
                     <legend>Product category</legend>
-                    <input type="radio" name="category" id="category-Cat1">
+                    <input type="radio" name="category" id="category-Cat1" checked>
                     <label for="category-Cat1">Cat 1</label>
                     <input type="radio" name="category" id="category-Cat2">
                     <label for="category-Cat2">Cat 2</label>
                     <input type="radio" name="category" id="category-Cat3">
                     <label for="category-Cat3">Cat 3</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Archivos</legend>
+                    <input type="file" name="image" id="image">
+                    <label for="image">Subir imagen</label>
                 </fieldset>
             <button type="submit">Guardar</button>
         </form>

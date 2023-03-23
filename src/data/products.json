@@ -3,36 +3,56 @@
     "name": "One",
     "price": 500,
     "category": "Cat1",
-    "sku": 1
+    "sku": 1,
+    "image": "default.png"
   },
   {
     "name": "Two",
     "price": 100,
     "category": "Cat1",
-    "sku": 2
+    "sku": 2,
+    "image": "default.png"
   },
   {
     "name": "Three",
     "price": 1500,
     "category": "Cat2",
-    "sku": 3
+    "sku": 3,
+    "image": "default.png"
   },
   {
     "name": "Prueba1",
     "price": 1000,
     "category": "Cat2",
-    "sku": 4
+    "sku": 4,
+    "image": "default.png"
   },
   {
     "name": "Producto nro 5",
     "price": 2500,
     "category": "Cat3",
-    "sku": 5
+    "sku": 5,
+    "image": "default.png"
   },
   {
     "name": "Prueba1",
     "price": 1,
     "category": "Cat1",
-    "sku": 6
+    "sku": 6,
+    "image": "default.png"
+  },
+  {
+    "name": "Prueba carga foto json",
+    "price": 500,
+    "category": "Cat2",
+    "sku": 7,
+    "image": "default.png"
+  },
+  {
+    "name": "Prueba3",
+    "price": 600,
+    "category": "on",
+    "sku": 8,
+    "image": "image-1679570943139.JPG"
   }
 ]

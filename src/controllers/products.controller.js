@@ -22,6 +22,11 @@ const controller = {
         return res.render('create');
     },
     save: (req,res) => {
+        if(req.files && req.files.length > 0){
+            req.body.image = req.files[0].filename
+        } else {
+            req.body.image = 'default.png'
+        }
         let newProduct = generate(req.body)
         let allProducts = all()
         allProducts.push(newProduct)
@@ -34,6 +39,9 @@ const controller = {
 
     },
     update: (req, res) => {
+        if(req.files && req.files.length > 0){
+            return res.send({archivos:req.files})
+        }
         let allProducts = all();
         let updatedProducts = allProducts.map(element => {
             if (element.sku == req.body.sku) {

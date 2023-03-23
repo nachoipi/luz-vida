@@ -11,6 +11,9 @@
 
         <% if (product) { %>
             <article>
+                <picture>
+                    <img src="/products/<%= product.image %>" alt="product-img">
+                </picture>
                 <h2><%= product.name %> <span>$<%= product.price %></span></h2>
                 <nav>
                     <a href="/productos/<%= product.category %>"><%= product.category %></a>
