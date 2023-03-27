@@ -1,4 +1,6 @@
 const {all,one,generate,write} = require('../models/products.model')
+const {join} = require('path');
+const {unlinkSync} = require('fs');
 
 const controller = {
     
@@ -39,19 +41,28 @@ const controller = {
 
     },
     update: (req, res) => {
-        if(req.files && req.files.length > 0){
-            return res.send({archivos:req.files})
-        }
         let allProducts = all();
         let updatedProducts = allProducts.map(element => {
             if (element.sku == req.body.sku) {
                 element.name = req.body.name;
                 element.price = parseInt(req.body.price);
                 element.category = req.body.category;
+                element.image = req.files && req.files.length > 0 ? req.files[0].filename : element.image;
             }
             return element
         })
         write(updatedProducts)
+        return res.redirect('/productos/')
+    },
+    remove: (req,res) => {
+        let product = one(req.body.sku)
+        if(product.image != 'default.png') {
+            let file = join(__dirname, '..','..','public','products', product.image)
+            unlinkSync(file)
+        }
+        let allProducts = all();
+        let nonDeletedProducts = allProducts.filter(element => element.sku != req.body.sku);
+        write(nonDeletedProducts)
         return res.redirect('/productos/')
     }
 };

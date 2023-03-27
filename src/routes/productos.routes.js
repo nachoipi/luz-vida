@@ -32,4 +32,6 @@ route.get('/productos/editar/:producto',controller.edit);
 
 route.put('/productos/actualizar', upload.any(), controller.update);
 
+route.delete('/productos/borrar', controller.remove);
+
 module.exports = route;

@@ -47,12 +47,5 @@
     "category": "Cat2",
     "sku": 7,
     "image": "default.png"
-  },
-  {
-    "name": "Prueba3",
-    "price": 600,
-    "category": "on",
-    "sku": 8,
-    "image": "image-1679570943139.JPG"
   }
 ]
