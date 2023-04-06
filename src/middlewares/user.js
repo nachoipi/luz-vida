@@ -1,4 +1,5 @@
 const {index} = require('../models/users.model');
+
 const middleware = (req,res,next) => {
     let user = null;
     if (req.cookies && req.cookies.user) {

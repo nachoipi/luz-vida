@@ -27,9 +27,9 @@ app.use(session({
 }));
 app.use(cookie());
 
-
 app.use(require('./middlewares/user'));
 
 /*ROUTES*/
 app.use(require('./routes/productos.routes'));
 app.use(require('./routes/main.routes'));
+app.use('/users', require('./routes/users.routes'));
