@@ -1,5 +1,6 @@
 const {index, write} = require('../models/users.model');
 const { validationResult } = require('express-validator');
+const { hashSync } = require('bcrypt');
 
 const usersController = {
     login: (req,res) => res.render('users/login'),
@@ -17,7 +18,8 @@ const usersController = {
         }
         let all = index();
         req.body.avatar = req.files && req.files[0] ? req.files[0].filename : null
-        req.body.id = all.length > 0 ? all.pop().id + 1 : 1
+        req.body.id = all.length > 0 ? index().pop().id + 1 : 1
+        req.body.password = hashSync(req.body.password,10);
         let user = {...req.body};
         all.push(user)
         write(all)
@@ -36,6 +38,11 @@ const usersController = {
         res.cookie('user',req.body.email,{maxAge: 3000})
         let all = index();
         req.session.user = all.find(user => user.email == req.body.email)
+        return res.redirect('/')
+    },
+    logout: (req,res) => {
+        delete req.session.user
+        res.cookie('user',null,{maxAge: -1})
         return res.redirect('/')
     }
 }

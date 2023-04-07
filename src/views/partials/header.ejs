@@ -1,10 +1,34 @@
-<div><img src="" alt="Logo de la empresa"></div>
-<nav>
-    <ul>
-        <li><a href="#">PRODUCTOS</a></li>
-        <li><a href="#">CONTACTO</a></li>
-        <li><a href="#">NOSOTROS</a></li>
-        <li><a href="#">CARRITO</a></li>
-        <li><a href="#">CUENTA</a></li>
-    </ul>
-</nav>
+<header id="'main-header">
+    <picture>
+        <img src="" alt="Logo de la empresa">
+    </picture>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="#">PRODUCTOS</a></li>
+            <li><a href="#">CONTACTO</a></li>
+            <li><a href="#">NOSOTROS</a></li>
+            <li><a href="#">CARRITO</a></li>
+            <li><a href="#">CUENTA</a></li>
+        </ul>
+    </nav>
+    <nav id="users-nav">
+        <a href="/">
+            <i class="fa-solid fa-home"></i>
+        </a>
+        <% if (!user) { %>
+            <a href="/users/login">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </a>
+            <a href="/users/register">
+                <i class="fa-solid fa-plus"></i>
+            </a>
+        <% } else { %>
+            <a href="/users/profile">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <a href="/users/logout">
+                <i class="fa-solid fa-door-open"></i>
+            </a>
+        <% } %>
+    </nav>
+</header>
